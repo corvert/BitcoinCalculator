@@ -41,6 +41,7 @@ namespace BitcoinCalculator
             using (var responseReader = new StreamReader(webStream))
             {
                 var data = responseReader.ReadToEnd();
+
             }
         }
     }
