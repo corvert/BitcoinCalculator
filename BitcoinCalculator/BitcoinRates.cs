@@ -42,5 +42,4 @@ namespace BitcoinCalculator
         public string description { get; set; }
         public double rate_float { get; set; }
     }
-
 }
