@@ -27,9 +27,31 @@ namespace BitcoinCalculator
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if(currencySelector.SelectedItem.ToString() == "EUR")
+            {
+                resultLabel.Visible = true;
+                tulemusLabel.Visible = true;
+                BitcoinRates newBitcoinRates = getRates();
+                float result = float.Parse(bitcoinAmountInput.Text) * (float)newBitcoinRates.Bpi.EUR.rate_float;
+                resultLabel.Text = $"{result} Bitcoini {newBitcoinRates.Bpi.EUR.code}";
+            } else if(currencySelector.SelectedItem.ToString() == "USD")
+              {
+                resultLabel.Visible = true;
+                tulemusLabel.Visible = true;
+                BitcoinRates newBitcoinRates = getRates();
+                float result = float.Parse(bitcoinAmountInput.Text) * (float)newBitcoinRates.Bpi.USD.rate_float;
+                resultLabel.Text = $"{result} Bitcoini {newBitcoinRates.Bpi.USD.code}";
+            } else if(currencySelector.SelectedItem.ToString() == "EEK")
+            {
+                resultLabel.Visible = true;
+                tulemusLabel.Visible = true;
+                BitcoinRates newBitcoinRates = getRates();
+                float result = float.Parse(bitcoinAmountInput.Text) * (float)newBitcoinRates.Bpi.EUR.rate_float*(float)15.64;
+                resultLabel.Text = $"{result} Bitcoini EEK";
 
+            }
         }
-        public static void getRates(string currency)
+        public static BitcoinRates getRates()
         {
             string url = "https://api.coindesk.com/v1/bpi/currentprice.json";
             HttpWebRequest request =  (HttpWebRequest)WebRequest.Create(url);
@@ -38,11 +60,14 @@ namespace BitcoinCalculator
             var response = request.GetResponse();
             var webStream = response.GetResponseStream();
 
+            BitcoinRates bitcoin;
             using (var responseReader = new StreamReader(webStream))
             {
                 var data = responseReader.ReadToEnd();
+                bitcoin = JsonConvert.DeserializeObject<BitcoinRates>(data);
 
             }
+            return bitcoin;
         }
     }
 }
