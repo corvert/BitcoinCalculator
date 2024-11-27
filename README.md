@@ -48,5 +48,3 @@ Kasutaja saab sisestada BTC koguse ja soovitud valuuta, mille väärtus arvutata
 1. **Viga API päringu tegemisel:** Kontrolli, kas internetiühendus on korras.  
 2. **Vale sisend BTC koguse või valuuta puhul:** Rakendus kuvab veateate, kui sisestus ei ole korrektne.  
 
-## Täiendused tulevikus
-- Lisada rohkem valuutasid.  
