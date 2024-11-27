@@ -1,4 +1,4 @@
-# Bitcoin Kalkulaatori 
+# Bitcoin Kalkulaator
 
 ## Ülevaade
 Bitcoin Kalkulaator on rakendus, mis võimaldab kasutajal arvutada Bitcoin'i (BTC) väärtust erinevates valuutades, kasutades reaalajas andmeid CoinDesk API-st. Rakendus toetab järgmisi valuutasid:  
