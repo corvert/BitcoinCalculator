@@ -29,9 +29,11 @@ namespace BitcoinCalculator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtCurrency.Text))
+            if (string.IsNullOrWhiteSpace(txtCurrency.Text) || (!txtCurrency.Text.ToLower().Equals("eur") && 
+                !txtCurrency.Text.ToLower().Equals("eek") && !txtCurrency.Text.ToLower().Equals("usd") &&
+                !txtCurrency.Text.ToLower().Equals("jpy") && !txtCurrency.Text.ToLower().Equals("gbp")))
             {
-                MessageBox.Show("Palun siseta valuuta", "Sisestus viga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Palun siseta valuuta, sisestada saab (EUR, USD, EEK, JPY, GBP)", "Sisestus viga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (string.IsNullOrWhiteSpace(bitcoinAmountInput.Text) || !float.TryParse(bitcoinAmountInput.Text, out float bitcoinAmount))
