@@ -6,7 +6,7 @@ Bitcoin Kalkulaator on rakendus, mis võimaldab kasutajal arvutada Bitcoin'i (BT
 - USD (USA dollar)  
 - EEK (Eesti kroon, ümberarvestus euro alusel)  
 - GBP (Suurbritannia nael)  
-- JPY (Jaapani jeen)  
+- JPY (Jaapani jeen, ümberarvestus euro alusel)  
 
 Kasutaja saab sisestada BTC koguse ja soovitud valuuta, mille väärtus arvutatakse automaatselt.
 
