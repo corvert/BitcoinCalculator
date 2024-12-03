@@ -30,7 +30,7 @@ Kasutaja saab sisestada BTC koguse ja soovitud valuuta, mille väärtus arvutata
 - **0.5 BTC = 17,000 USD**
 
 ## Funktsioonid
-- **Reaalajas kursid:** Kasutab CoinDesk API-t, et tuua kõige uuemad BTC kursid.  
+- **Reaalajas kursid:** Kasutab CoinDesk API-t, et tuua kõige uuemad BTC kursid (EUR, USD, GBP).  
 - **Faili salvestamine:** Iga arvutus salvestatakse automaatselt faili, et tulemused oleks hiljem kättesaadavad.  
 - **Erinevad valuutad:** Toetab mitmeid valuutasid, sealhulgas ajaloolist Eesti krooni.  
 
